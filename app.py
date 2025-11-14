@@ -29,19 +29,33 @@ def gerar_pdf(dados):
     buffer.close()
     return pdf
 
-st.title("🧾 Ficha de Admissão - 2024")
+st.title("🧾 Ficha de Admissão - Lara Associados")
 st.caption("Preencha os dados abaixo e gere os arquivos PDF e Excel")
 
 dados = {
     "Razão Social": st.text_input("Razão Social"),
+    "Empregador": st.text_input("Empregador"),
     "Empregado": st.text_input("Empregado"),
+    "CPF": st.text_input("CPF"),
+    "Nascimento": st.text_input("Data de Nascimento"),
+    "Estado Civil": st.text_input("Estado Civil"),
+    "Sexo": st.text_input("Sexo"),
+    "Raça": st.text_input("Raça"),
+    "Grau de Instrução": st.text_input("Grau de Instrução"),
+    "Nome da mãe": st.text_input("Nome da mãe"),
+    "Nome do pai": st.text_input("Nome do pai"),
+    "Endereço": st.text_input("Endereço"),
+    "Contato": st.text_input("Contato"),
+    "Dependente": st.text_input("Dependente"),
+    "CPF Dependente": st.text_input("CPF Dependente"),
+    "Nascimento Dependente": st.text_input("Data de Nascimento Dependente"),
+    "Dependente": st.text_input("Dependente"),
+    "CPF Dependente": st.text_input("CPF Dependente"),
+    "Nascimento Dependente": st.text_input("Data de Nascimento Dependente"),
     "Admissão": st.date_input("Data de Admissão", value=date.today()),
     "Função": st.text_input("Função"),
-    "CPF": st.text_input("CPF"),
     "Salário": st.number_input("Salário (R$)", min_value=0.0, step=0.01),
-    "Nascimento": st.date_input("Data de Nascimento"),
     "Horário": st.text_input("Horário de Trabalho"),
-    "Nº PIS": st.text_input("Nº PIS"),
     "Intervalo": st.text_input("Intervalo"),
     "Naturalidade": st.text_input("Naturalidade"),
 }
